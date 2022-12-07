@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import AboutUs from './screens/AboutUs'
+import Consulting from './screens/consulting/Consulting'
+import Development from './screens/developement/Development'
+import HomeScreens from './screens/home/HomeScreens'
+import Marketing from './screens/marketing/Marketing'
+import DesignScreen from './screens/service/DesignScreen'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/'>
+            <Route index element={<HomeScreens />} />
+            <Route path='service'>
+              <Route index element={<div>service</div>} />
+              <Route path='design' element={<DesignScreen />} />
+              <Route path='marketing' element={<Marketing />} />
+              <Route path='development' element={<Development />} />
+              <Route path='consulting' element={<Consulting />} />
+            </Route>
+            <Route path='about-us' element={<AboutUs />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App

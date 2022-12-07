@@ -1,0 +1,58 @@
+#banner {
+  height: 100vh;
+}
+
+#banner > div {
+  margin-top: 7rem;
+}
+
+#banner > div > h1 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+#banner > div > h2 {
+  font-size: 3.5rem;
+}
+#offers {
+  padding-top: 5rem;
+  height: 100vh;
+}
+#offers > h3 {
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+#offers > div {
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+
+.offdiv {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 50rem;
+  padding: 1rem;
+  column-gap: 1rem;
+}
+.offdiv > img {
+  width: 200px;
+}
+
+.offdiv > div > h5 {
+  font-weight: 400;
+}
+
+.offdiv > div > h5 > span {
+  font-weight: 600;
+}
+
+.offdiv > div > p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#offers > .cards > div > div > p {
+  font-size: 12px;
+  font-weight: 400;
+}
